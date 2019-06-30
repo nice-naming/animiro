@@ -1,0 +1,20 @@
+@import "src/animations/opacity.animations";
+@import "src/modificators/repeat.modificator";
+
+
+.animate-me {
+  @include opacity-fadein(1s, 1s);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: block;
+}
+
+.animate-me-infinity {
+  @include opacity-fadein(1s, 1s);
+  @extend %repeat;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: block;
+}

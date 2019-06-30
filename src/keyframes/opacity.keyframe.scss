@@ -1,0 +1,26 @@
+@import "../mixins/keyframe.mixin";
+
+%opacity-fadeout {
+  @include keyframe(fadeout) {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+%opacity-fadein {
+  @include keyframe(fadein) {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+

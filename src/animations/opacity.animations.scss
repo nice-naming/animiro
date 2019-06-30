@@ -1,0 +1,15 @@
+@import "../mixins/animation.mixin";
+@import "../mixins/keyframe.mixin";
+
+@mixin opacity-fadein ($delay, $duration) {
+  @include keyframe(fadein) {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+  @include animation($delay, $duration, fadein);
+}
